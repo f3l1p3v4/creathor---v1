@@ -1,0 +1,194 @@
+.social-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding: 150px 100px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.social-wrapper .social-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translate(0, -50%);
+  width: 350px;
+  height: 350px;
+}
+.social-wrapper .social-logo img{
+  width: 100px;
+  height: 100px;
+}
+.social-wrapper .social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translate(0, -50%);
+  width: 350px;
+  height: 350px;
+  animation: rodandoMundo 8s linear infinite;
+}
+@keyframes rodandoMundo {
+  0% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, -50%) rotate(360deg);
+  }
+}
+.social-wrapper .social-circle .social-line.social-line-one {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid var(--color-green-1);
+  border-right: 2px solid transparent;
+}
+.social-wrapper .social-circle .social-line.social-line-two {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: absolute;
+  border: 20px solid var(--color-green-1);
+  border-top: 30px solid transparent;
+}
+.social-wrapper .social-circle .social-line.social-line-three {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  border: 15px solid var(--color-green-1);
+  box-shadow: 0 -50px 100px 0 rgba(0, 0, 0, 0.5);
+  border-left: 15px solid transparent;
+}
+.social-wrapper .social-circle .social-line.social-line-four {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 50px 100px 0 rgba(255, 255, 255, 0.2);
+  border-bottom: 4px solid transparent;
+  animation: rodandosocial-lineQuatro 20s linear infinite;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes rodandosocial-lineQuatro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.social-wrapper .social-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+.social-wrapper .social-title h2 {
+  font-size: 3.5rem;
+  color: var(--color-white);
+}
+.social-wrapper .social-title h2 span {
+  color: var(--color-green-1);
+}
+.social-wrapper .social-title p {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  opacity: 0.7;
+  line-height: 1.5;
+  padding: 10px 0 0 0;
+  margin: 10px 0 20px 0;
+}
+.social-wrapper .social-title a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-background-1);
+  background-color: var(--color-green-1);
+  border: 3px solid var(--color-green-1);
+  border-radius: 100px;
+  padding: 15px 60px 15px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.social-wrapper .social-title a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-background-1);
+}
+.social-wrapper .social-title a:hover .img-insta-btn {
+  color: var(--color-white);
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+.social-wrapper .social-title a .img-insta-btn {
+  position: absolute;
+  right: 15px;
+  max-width: 30px;
+  max-height: 30px;
+  padding: 1px;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  .social-wrapper {
+    padding: 60px 25px 350px 25px;
+  }
+  .social-wrapper .social-logo {
+    top: auto;
+    bottom: -170px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+  }
+  .social-wrapper .social-logo img{
+    width: 80px;
+    height: 80px;
+  }
+  .social-wrapper .social-circle {
+    top: auto;
+    bottom: -170px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+  }
+  .social-wrapper .social-circle .social-line.social-line-one {
+    width: 350px;
+    height: 350px;
+  }
+  .social-wrapper .social-circle .social-line.social-line-two {
+    width: 300px;
+    height: 300px;
+    border: 20px solid var(--color-green-1);
+    border-top: 30px solid transparent;
+  }
+  .social-wrapper .social-circle .social-line.social-line-three {
+    width: 200px;
+    height: 200px;
+  }
+  .social-wrapper .social-circle .social-line.social-line-four {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .social-wrapper .social-title h2 {
+    font-size: 2rem;
+  }
+  .social-wrapper .social-title p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}

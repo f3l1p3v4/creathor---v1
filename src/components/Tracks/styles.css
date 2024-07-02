@@ -1,0 +1,72 @@
+
+section.tracks-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  overflow: hidden;
+}
+section.tracks-wrapper .faixa {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  //bottom: 40px;
+  left: -5%;
+  width: 110%;
+  //padding: 0 40px;
+  height: 50px;
+  background-color: var(--color-green-1);
+  color: var(--color-background-1);
+  //transform: rotate(2deg);
+  z-index: 3;
+  overflow: hidden;
+}
+section.tracks-wrapper .faixa .itens {
+  display: flex;
+  align-items: center;
+  animation: faixa 90s linear infinite;
+}
+@keyframes faixa {
+  0% {
+    transform: translate(0%, 0);
+  }
+  50% {
+    transform: translate(-1300px, 0);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}
+section.tracks-wrapper .faixa.dois {
+  background-color: var(--cor-escuro);
+  transform: rotate(-1deg);
+  height: 80px;
+}
+section.tracks-wrapper .faixa p {
+  font-size: 0.8rem;
+  text-align: center;
+  min-width: 210px;
+}
+section.tracks-wrapper .faixa .itens .tracks-icon {
+  right: 10px;
+  width: auto;
+  max-width: 30px;
+  height: auto;
+  max-height: 30px;
+  border-radius: 50%;
+  padding: 3px;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  section.tracks-wrapper .faixa.dois {
+    //transform: rotate(-2deg);
+  }
+  section.tracks-wrapper .faixa {
+    //transform: rotate(3deg);
+  }
+  section.tracks-wrapper .faixa p {
+    min-width: 150px;
+  }
+  section.tracks-wrapper .faixa img {
+    width: 15px;
+  }
+}

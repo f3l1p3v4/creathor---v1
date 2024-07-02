@@ -1,0 +1,148 @@
+.comments-wrapper {
+  background-image: url('../../images/background.png');
+  background-size: cover;
+  background-position: center;
+}
+.comments-wrapper .comments-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comments-wrapper .comments-content .comments-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px;
+  width: 80%;
+}
+.comments-wrapper .comments-content .comments-title h2 {
+  font-size: 3.5rem;
+  color: var(--color-white);
+  width: 100%;
+  max-width: 500px;
+}
+.comments-wrapper .comments-content .comments-title h2 span{
+  color: var(--color-green-1);
+}
+.comments-wrapper .comments-content .comments-title p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-white);
+  opacity: 0.7;
+  margin: 20px 0 0 0;
+  width: 100%;
+  max-width: 500px;
+}
+.comments-wrapper .comments-content .comments-students {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+}
+.comments-wrapper .comments-content .comments-students .comments-student {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  background-color: var(--color-background-1);
+  padding: 25px 20px 25px 60px;
+  border-radius: 15px;
+  border: 2px solid var(--color-green-2);
+}
+.comments-wrapper .comments-content .comments-students .comments-student:nth-child(2) {
+  margin: 20px 0;
+}
+.comments-wrapper .comments-content .comments-students .comments-student img {
+  position: absolute;
+  left: -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--color-green-1);
+}
+.comments-wrapper .comments-content .comments-students .comments-student .comments-text {
+  overflow-y: scroll;
+  max-height: 80px;
+  height: 80px;
+  min-height: 80px;
+}
+.comments-wrapper .comments-content .comments-students .comments-student .comments-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-white);
+  padding: 0 20px 0 0;
+}
+.comments-wrapper .comments-content .comments-students .comments-student span {
+  font-size: 1rem;
+  color: var(--color-green-1);
+  padding: 20px 0 0 0;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  .comments-wrapper .comments-content {
+    flex-direction: column-reverse;
+    min-height: 100%;
+  }
+  .comments-wrapper .comments-content .comments-title {
+    padding: 60px 25px;
+    width: 100%;
+  }
+  .comments-wrapper .comments-content .comments-students {
+    min-height: 100%;
+    padding: 40px 25px 60px 65px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .comments-wrapper .comments-content .comments-title h2 {
+    font-size: 2rem;
+    max-width: 300px;
+  }
+  .comments-wrapper .comments-content .comments-title p {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 400px;
+  }
+  .comments-wrapper .comments-content .comments-students {
+    min-height: 100%;
+    padding: 40px 25px 60px 25px;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student {
+    padding: 50px 20px 20px 20px;
+    width: 100%;
+    max-width: 400px;
+    display: relative;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student:nth-child(2) {
+    margin: 50px 0;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student .img-student {
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: -30px;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student .comments-text {
+    max-height: 80px;
+    height: 80px;
+    min-height: 80px;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student .comments-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student .comments-text p span {
+    color: var(--color-green-1)
+  }
+  .comments-wrapper .comments-content .comments-students .comments-student span {
+    font-size: 0.8rem;
+  }
+}

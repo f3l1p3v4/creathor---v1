@@ -1,0 +1,23 @@
+@import './animations.css';
+@import './fonts.css';
+@import './normalize.css';
+@import './scrollbar.css';
+@import './variables.css';
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  background: var(--color-background-1);
+  color: var(--color-white);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}

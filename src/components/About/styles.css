@@ -1,0 +1,208 @@
+section.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: radial-gradient(circle at 70%,var(--color-green-2) 10%,var(--color-background-1) 30%);
+  background-size: 400% 400%;
+  animation: mexendoBackground 15s ease-in-out infinite;
+  position: relative;
+}
+@keyframes mexendoBackground {
+  0% {
+    background-position: 50% 30%
+  }
+  25% {
+    background-position: 100% 10%
+  }
+  50% {
+    background-position: 100% 90%
+  }
+  75% {
+    background-position: 60% 90%
+  }
+  100% {
+    background-position: 50% 30%
+  }
+}
+section.about-wrapper .about-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+section.about-wrapper .about-title h2 {
+  font-size: 3rem;
+  color: var(--color-white);
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+section.about-wrapper .about-title h2 span {
+  color: var(--color-green-1);
+}
+section.about-wrapper .about-title p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-white);
+  opacity: 0.7;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  max-width: 800px;
+}
+section.about-cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 100px 50px 50px 50px;
+  width: 100%;
+  gap: 20px;
+  max-width: 1000px;
+  position: relative;
+}
+section.about-cards .about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px 50px 50px;
+  width: 100%;
+  background-color: var(--color-background-2);
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  border-top: 10px solid var(--color-green-1);
+}
+section.about-cards .about-card .about-photo {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s;
+}
+section.about-cards .about-card .about-photo img {
+  right: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid var(--color-green-1);
+}
+section.about-cards .about-card a:hover img {
+  background-color: transparent;
+}
+section.about-cards .about-card h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+section.about-cards .about-card p {
+  font-size: 1rem;
+  color: var(--color-white);
+  opacity: 0.7;
+  line-height: 1.5;
+  padding: 10px 0 30px 0;
+  width: 100%;
+  max-width: 350px;
+}
+section.about-cards .about-card p a {
+  cursor: pointer;
+  color: var(--color-green-1);
+  font-weight: bold;
+}
+section.about-cards .about-card .card-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+section.about-cards .about-card .card-social .link-social {
+  background-color: var(--color-green-1);
+  border-radius: 4px;
+  border: 1px solid var(--color-green-1);
+  padding: 6px;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section.about-cards .about-card .card-social .link-social:hover {
+  color: var(--color-white);
+  background-color: var(--color-background-2);
+}
+section.about-cards .about-card .link-social svg {
+  font-size: 1.2rem;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  section.about-cards {
+    padding: 100px 0px 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.about-cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 20px 0px;
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.about-wrapper {
+    padding: 60px 25px;
+  }
+  section.about-wrapper .about-title h2 {
+    font-size: 2rem;
+    max-width: 500px;
+  }
+  section.about-wrapper .about-title p {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+  section.about-wrapper .about-title {
+    align-items: flex-start;
+    text-align: left;
+  }
+  section.about-cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 20px 0px;
+    gap: 0px;
+  }
+  section.about-cards .about-card {
+    padding: 100px 20px 30px 20px;
+  }
+  section.about-cards .about-card:nth-child(2) {
+    margin: 80px 0;
+  }
+  section.about-cards .about-card .about-photo {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+  }
+  section.about-cards .about-card h2 {
+    font-size: 1.8rem;
+  }
+  section.about-cards .about-card h3 {
+    font-size: 1.1rem;
+  }
+  section.about-cards .about-card p {
+    font-size: 0.9rem;
+  }
+}

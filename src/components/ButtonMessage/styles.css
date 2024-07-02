@@ -1,0 +1,25 @@
+.button-message {
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  padding: 10px;
+  border-radius: 80%;
+  border: none;
+  background-color: #159a27;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+  cursor: pointer;
+}
+
+.button-message svg {
+  font-size: 2rem;
+}
+
+/* @media screen and (max-width: 420px) {
+  .button-message {
+    left: 82%;
+  }
+} */
